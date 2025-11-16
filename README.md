@@ -22,3 +22,4 @@ Testing self hosted service install with docker compose
     └── origin-cert.pem
     └── origin-key.pem
 ```
+Add necessary nginx configuration files, and edit `index.html`.
