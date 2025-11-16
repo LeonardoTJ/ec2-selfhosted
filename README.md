@@ -1,6 +1,9 @@
 # ec2-selfhosted
 Testing self hosted service install with docker compose
 
+## Services
+- Nginx
+
 ## Directory Structure
 ```
 /home/ubuntu/selfhosted/
