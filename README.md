@@ -4,6 +4,10 @@ Testing self hosted service install with docker compose
 ## Services
 - Nginx
 
+#### Planned
+- Redlib
+- Jellyfin
+
 ## Directory Structure
 ```
 /home/ubuntu/selfhosted/
