@@ -13,37 +13,37 @@ services:
       - ./cloudflare:/etc/nginx/ssl:ro
     networks:
       - web
-    depends_on:
-      - redlib
+  #  depends_on:
+  #    - redlib
 
   # Example service: Redlib (privacy-friendly Reddit frontend)
-  redlib:
-    image: quay.io/redlib/redlib:latest
-    container_name: redlib
-    restart: unless-stopped
-    environment:
-      - REDLIB_DEFAULT_WIDE=on
-      - REDLIB_DEFAULT_THEME=black
-    networks:
-      - web
-    # No ports exposed - only accessible through nginx
+  #redlib:
+  #  image: quay.io/redlib/redlib:latest
+  #  container_name: redlib
+  #  restart: unless-stopped
+  #  environment:
+  #    - REDLIB_DEFAULT_WIDE=on
+  #    - REDLIB_DEFAULT_THEME=black
+  #  networks:
+  #    - web
+  #  # No ports exposed - only accessible through nginx
 
-  # Jellyfin Media Server
-  jellyfin:
-    image: jellyfin/jellyfin:latest
-    container_name: jellyfin
-    restart: unless-stopped
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/New_York
-    volumes:
-      - ./jellyfin/config:/config
-      - ./jellyfin/cache:/cache
-      - /path/to/your/media:/media:ro
-    networks:
-      - web
-    # No ports exposed - only accessible through nginx
+  ## Jellyfin Media Server
+  #jellyfin:
+  #  image: jellyfin/jellyfin:latest
+  #  container_name: jellyfin
+  #  restart: unless-stopped
+  #  environment:
+  #    - PUID=1000
+  #    - PGID=1000
+  #    - TZ=America/New_York
+  #  volumes:
+  #    - ./jellyfin/config:/config
+  #    - ./jellyfin/cache:/cache
+  #    - /path/to/your/media:/media:ro
+  #  networks:
+  #    - web
+  #  # No ports exposed - only accessible through nginx
 
 networks:
   web:
