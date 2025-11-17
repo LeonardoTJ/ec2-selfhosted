@@ -1,6 +1,13 @@
 # ec2-selfhosted
 Testing self hosted service install with docker compose
 
+## Services
+- Nginx
+
+#### Planned
+- Redlib
+- Jellyfin
+
 ## Directory Structure
 ```
 /home/ubuntu/selfhosted/
@@ -15,3 +22,7 @@ Testing self hosted service install with docker compose
     └── origin-cert.pem
     └── origin-key.pem
 ```
+Add necessary nginx configuration files, and edit `index.html`.
+
+## Something
+Test edit
